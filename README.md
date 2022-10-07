@@ -58,16 +58,22 @@ Você apenas ir no terminal e com o caminho onde estão os arquivos estraidos ex
 
 > python app.py
 
-Após isto, irá ter um terminal como este!
-
-
 Então você coloca o seu número que esta o grupo e o bot e confirma
 
 **OBS. O Número precisa estar com o código do País! ex. +551290000-0000**
 
 Irá ser enviado um código para seu telegram e basta apenas você o digitar no terminal!
 
-Então esta totalmente configurado e você já pode usar o /start no seu bot criado!
+Após isto, irá ter um terminal como este!
+
+![](static/rodando.png)
+
+E nas outras vezes irá estar assim!
+
+![](static/rodando-2.png)
+
+
+### Então esta totalmente configurado e você já pode usar o /start no seu bot criado!
 
 ![](static/bot-telegram.png)
 
