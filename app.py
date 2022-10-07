@@ -245,8 +245,8 @@ def open_martingales():
 @client.on_message(filters.text)
 async def process_signal(client, message):
     if message.chat.id == int(f'-100{os.getenv("GROUP_ID")}'):
-        logging.debug("Mensagem Recebida: \n %s", message.text)
-        if os.getenv('SIGNAL') in message.text:
+        logging.info("Mensagem Recebida: \n %s", message.text)
+        if re.findall(f'{os.getenv("SIGNAL")}',message.text):
             
             timeframe = re.findall(r'M{1}[1-9]{1,2}|D{1}[1-9]{1,2}',message.text)
             timeframe = timeframe[0] if len(timeframe) == 1 else timeframe[1]
@@ -298,7 +298,7 @@ async def process_config(client, message):
         max = max[0]
         max_martingale = round(float(max),2)
         await bot.send_message(message.chat.id, f"Martingale maximo configurado para {max}")
-        logging.info(f"Lot atual {max_martingale}")
+        logging.info(f"Martingale atual {max_martingale}")
     else:
         await message.reply_text("Você precisa enviar um número inteiro ex. 2")
 
