@@ -247,6 +247,8 @@ async def process_signal(client, message):
     if message.chat.id == int(f'-100{os.getenv("GROUP_ID")}'):
         logging.info("Mensagem Recebida: \n %s", message.text)
         if re.findall(f'{os.getenv("SIGNAL")}',message.text):
+            if re.findall(r'resultados para o dia',message.text, flags=re.I):
+                return
             
             timeframe = re.findall(r'M{1}[1-9]{1,2}|D{1}[1-9]{1,2}',message.text)
             timeframe = timeframe[0] if len(timeframe) == 1 else timeframe[1]
