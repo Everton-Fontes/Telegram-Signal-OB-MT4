@@ -83,4 +83,5 @@ Então esta totalmente configurado e você já pode usar o /start no seu bot cri
 - [x] Configurar Step do Lot Martingale.
 - [x] Configurar Lot dos Trades.
 - [x] Configurar Diferença de Horário entre corretoras.
-- [x] Criar entradas no Metatrader 4 sempre que chegar uma mensagem do grupo.
+- [x] Criar posições no Metatrader 4 sempre que chegar uma mensagem do grupo.
+- [x] Executar entradas no Metatrader 4 quando chegar o Horário.
